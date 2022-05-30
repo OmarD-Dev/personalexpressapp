@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Message Board</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Message Board</h1>
+  <h2>What's On Your Mind?</h2>
+
+
+  <h2>Topics</h2>
+  <ul class="topics">
+  <% for(let i=0; i<topics.length; i++) {%>
+    <li class="topic">
+      <span><%= topics[i].name %></span>
+      <span><%= topics[i].content %></span>
+      <span><%= topics[i].thumbUp %></span>
+      <input class="fixes" name="fix" placeholder="Enter a new comment">
+      <span><i class="fa fa-pencil" aria-hidden="true"></i></span>
+      
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+      <ul>
+        <li class="comments"><%= topics[i].responses %></li>
+
+      </ul>
+    </li>
+  <% } %>
+  </ul>
+
+  <h3>Add a message</h3>
+
+  <form action="/create" method="POST">
+    <input type="text" placeholder="Enter New Topic" name="content">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

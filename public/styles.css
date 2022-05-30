@@ -1,0 +1,28 @@
+body{
+ text-align: center;
+ font-family: 'Roboto Mono',Arial,sans-serif;
+ background-image: url("background.jpg");
+ background-position: center;
+ color: white;
+ font-size: 62.5%;
+}
+h1{
+  text-decoration: underline;
+  font-size: 3rem;
+}
+h2{
+  font-size: 2rem;
+}
+h3{
+  margin-top: 40px;
+  font-size: 1.7rem;
+}
+li{
+  list-style: none;
+}
+.topic{
+  font-size: 1.4rem;
+}
+.comments{
+  font-size: 1.1rem;
+}
